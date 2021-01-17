@@ -1,0 +1,242 @@
+﻿/* Import Reset.css */
+@import url('reset.css');
+
+/*Color Scheme http://paletton.com/#uid=23l2B0k2Uiy2wHP5yja92kydllS */
+/*
+Hex codes 
+color-primary-0: #52595A; // Main Primary color 
+color-primary-1: #B5C2C4;
+color-primary-2: #4E5C5D;
+color-primary-3: #486164;
+color-primary-4: #3F656B;
+
+color-complement-0: #948D86; // Main Complement color 
+color-complement-1: #FFF5EB;
+color-complement-2: #998B7E;
+color-complement-3: #A48C75;
+color-complement-4: #AE8866;
+*/
+
+html {
+    background-color: #52595A;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 62.5% /*10px is 62.5% of the default 16px*/
+}
+
+body {
+    line-height: 1.4; /*default line-height x 1.4 font size*/
+}
+
+div#form {
+    width: 300px;
+    border: 1px solid black;
+    margin: 20px;
+    float: left;
+    padding-bottom: 10px;
+    background-color: #e1e1e1;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+h1 {
+    font-weight: 400; /*normal bold*/
+    font-size: 3rem;
+    color: #4E5C5D;
+    text-align: center;
+    /*clear: left;*/ /*if there is anything to the left or right, move this down*/
+    padding: 0.5rem 1.5rem; /*top/bottom, right/left*/
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 2.2rem; /*"rem" = 2.2 times the font size of the root element (html). "em" would x by parent element*/
+    color: #B5C2C4;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+    h2 a {
+        font-size: inherit; /*font of a element inherits font-size of the parent h2 element*/
+    }
+
+h3 {
+    font-size: 1.8rem;
+    color: #B5C2C4;
+    font-weight: 400;
+    line-height: 1.1;
+    text-align: center;
+}
+
+h4 {
+    font-size: 1.8rem;
+    color: #B5C2C4;
+    font-weight: 400;
+    line-height: 1.1;
+    text-align: center;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+a {
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+#Webpage {
+    width: 960px;
+    margin: 1.5rem auto;
+}
+
+/*Banner Layout*/
+#Banner {
+    background-color: #B5C2C4;
+    border-radius: 20px; /*rounding the corners of the banner*/
+    box-shadow: 5px 5px 5px #333333; /*add dropshadow*/
+    padding: 1rem 1rem 0; /*space inside the container around the banner content*/
+    margin-bottom: 1.5rem; /*spacing around the banner*/
+    overflow: hidden;
+}
+
+    #Banner #BSULogo { /*Inside the "Banner" id, "a" element with the "BSUlogo" id*/
+        float: left;
+    }
+
+        #Banner #BSULogo img { /*Inside the "Banner" id, "a" element with the "BSUlogo" id, specifically the "img" element*/
+            height: 127px;
+            /*border-radius:20px;*/
+        }
+
+    #Banner nav {
+        background-color: #486164;
+        border-radius: 10px;
+        padding: 0.5rem 0;
+        overflow: hidden; /*hide the overflow on the nav bar from the hover background-color*/
+        clear: both;
+    }
+
+        #Banner nav ul {
+            text-align: center;
+        }
+
+        #Banner nav li {
+            display: inline; /*display the nav items in a row instead of a column*/
+        }
+
+        #Banner nav a {
+            color: #B5C2C4;
+            padding: 1rem 3rem;
+        }
+
+            #Banner nav a:hover {
+                background-color: #948D86;
+                color: #4E5C5D;
+            }
+/*Banner Layout END*/
+
+/*Wrapper Content Layout*/
+#Wrapper {
+    background-color: #3F656B;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #333333;
+    margin-bottom: 1.5rem;
+    overflow: hidden; /*the floated parts are making the wrapper height zero*/
+}
+
+    #Wrapper h2 {
+        padding: 1.0rem 0;
+        text-align: center;
+    }
+
+/*Wrapper SideLinks*/
+#SideLinks {
+    width: 20%; /*15% of 960px set from #WebPage width*/
+    float: left;
+}
+
+    #SideLinks ul {
+        text-align: center;
+    }
+
+    #SideLinks li {
+        padding-bottom: 1rem;
+    }
+
+    #SideLinks a {
+        color: #AE8866;
+    }
+
+        #SideLinks a:hover {
+            color: #B5C2C4;
+            text-decoration: underline;
+        }
+
+/* Wrapper Blog Articles*/
+#Posts {
+    width: 80%;
+    float: right;
+}
+
+    #Posts a { /*styling link/title inside the h2 element*/
+        color: #4E5C5D;
+    }
+
+        #Posts a:hover {
+            color: #AE8866;
+            text-decoration: underline;
+        }
+
+    #Posts hr { /*color and style of the break line between posts*/
+        border-color: #AE8866;
+        border-style: ridge;
+    }
+
+    #Posts footer {
+        padding: 0.5rem;
+    }
+
+    #Posts article {
+        margin: 1.5rem;
+        padding: 1rem;
+        background-color: white;
+    }
+
+    .button{
+        background-color:white;
+        width:120px;
+        margin:5px;
+        padding:5px;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px #333333;
+    }
+/*Wrapper Content Layout END*/
+
+/*Footer Layout*/
+#Footer {
+    background-color: #4E5C5D;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #333333;
+    padding: 1.5rem;
+    overflow: hidden;
+}
+
+    #Footer #UndeadBSUlogo {
+        float: left;
+    }
+
+#UndeadBSUlogo a img {
+    height: 127px;
+}
+
+#Footer p {
+    clear: both;
+    color: #B5C2C4;
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 10px;
+    font-style: italic;
+}
+/*Footer Layout END*/
